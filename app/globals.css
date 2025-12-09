@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: radial-gradient(circle at top, #f5f3ff, #f8fbff 35%, #ffffff 70%);
+  --cta: #2563eb;
+  --cta-dark: #1d4ed8;
+  --accent: #10b981;
+  --body: #0f1115;
+  --muted: #5c6475;
+  --stroke: rgba(15, 17, 21, 0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--body);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  isolation: isolate;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+}
+
+.card-surface {
+  border: 1px solid var(--stroke);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.4), transparent 70%);
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(30px);
+  z-index: -1;
+}
+
+.grid-overlay {
+  background-image: linear-gradient(90deg, rgba(15, 17, 21, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(15, 17, 21, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.skip-link {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -120%);
+  transition: transform 0.2s ease;
+  background: #111827;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  z-index: 50;
+}
+
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+}
