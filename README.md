@@ -3,20 +3,13 @@
 Marketing + blueprint case study showing how I approach site architecture, system tokens, and developer handoff.
 
 ## Highlights
-- `/` — high-fidelity marketing surface with purposeful copy, stats, testimonials, and CTA.
-- `/blueprint` — annotated architecture page mirroring my Figma frames (sitemap, grids, motion specs).
-- `/docs` — `design-system.md` + `architecture.md` capture tokens, layout rules, and process notes.
+- `/` presents the full marketing narrative with metrics, testimonials, and purpose-built CTAs.
+- `/blueprint` mirrors the annotated Figma file with sitemap, responsive grids, and motion specs for engineers.
+- `/docs` contains `design-system.md` and `architecture.md`, documenting tokens, spacing, and flow decisions.
 
-## UX & Accessibility
-- Skip link, keyboard-visible focus styles, and descriptive aria labels.
-- Micro-interactions on cards/buttons (translate + shadow) explained in the blueprint.
-- Semantic landmarks (`header`, `nav`, `section`, `footer`) for screen readers.
+## Craft & Handoff
+- Accessibility fundamentals: skip link, semantic landmarks, visible focus states, and high-contrast palette.
+- Micro-interactions (card lift, CTA shadows) are described in the blueprint route for consistent implementation.
+- Design file: [CloudSync Landing Blueprint](https://www.figma.com/file/gamemaker-cloudsync/CloudSync-Landing-Blueprint?type=design).
 
-## Deploying
-```bash
-npm install
-npm run dev    # iterate
-npm run build  # verify production build before pushing to Vercel
-```
-
-Deploy the folder as a Next.js project on Vercel (build command `next build`, output `.next`). Include the live URL + a link to your Figma blueprint when applying.
+Deploy as a standard Next.js app on Vercel (`next build` / `.next`). Share the live URL alongside the blueprint and docs so reviewers see both the polish and the process.
