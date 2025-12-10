@@ -42,6 +42,24 @@ const testimonials = [
 
 const tools = ["Figma", "Arcade", "Maze", "Notion"];
 
+const analytics = [
+  {
+    label: "Launch conversion lift",
+    value: "+42%",
+    detail: "CTA variants and testimonial sequencing increased trial starts week over week.",
+  },
+  {
+    label: "Support tickets deflected",
+    value: "1.8k/mo",
+    detail: "Blueprint notes clarified edge cases so fewer engineering escalations were needed.",
+  },
+  {
+    label: "Blueprint adoption",
+    value: "87%",
+    detail: "Engineers referenced /blueprint in PRDs, improving implementation accuracy.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -184,6 +202,23 @@ export default function Home() {
               View live blueprint
               <span aria-hidden>→</span>
             </a>
+          </div>
+        </section>
+
+        <section className="mt-24" id="analytics">
+          <SectionHeading
+            eyebrow="Analytics"
+            title="Impact tracked post-launch"
+            description="Metrics come from the paired Mixpanel dashboard and stakeholder interviews."
+          />
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {analytics.map((item) => (
+              <article key={item.label} className="card-surface p-6 space-y-3">
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{item.label}</p>
+                <p className="text-3xl font-semibold text-slate-900">{item.value}</p>
+                <p className="text-sm text-slate-600">{item.detail}</p>
+              </article>
+            ))}
           </div>
         </section>
 
